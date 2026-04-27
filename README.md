@@ -1,2 +1,0 @@
-# Fjr-np
-Ytta
