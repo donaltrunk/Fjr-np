@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Fajjar</title>
+
+  <!-- HUBUNGKAN CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PROFIL -->
+<section class="hero">
+  <h1>Fajjar Nafarriq Prayuga</h1>
+  <p>Kelas 11 RPL 2 · SMK KRIAN 1</p>
+</section>
+
+<section class="card">
+  <h2>Tentang Saya</h2>
+  <p>Saya adalah siswa RPL yang tertarik pada pembuatan website dan teknologi.</p>
+</section>
+
+<section class="card">
+  <h2>Hobi</h2>
+  <div class="hobby">
+    <span>🏊‍♂️</span>
+    <p>Saya hobi berenang karena menyehatkan dan menyenangkan.</p>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section class="card">
+  <h2>Proyek Saya - AeroPedia</h2>
+
+  <div class="gallery-grid">
+    <div class="plane-card" data-plane="boeing747">
+      <img src="Boeing_747.jpg">
+      <div class="plane-name">Boeing 747</div>
+    </div>
+
+    <div class="plane-card" data-plane="a380">
+      <img src="p.jpg">
+      <div class="plane-name">Airbus A380</div>
+    </div>
+
+    <div class="plane-card" data-plane="concorde">
+      <img src="c.jpg">
+      <div class="plane-name">Concorde</div>
+    </div>
+
+    <div class="plane-card" data-plane="cessna172">
+      <img src="s.jpg">
+      <div class="plane-name">Cessna 172</div>
+    </div>
+
+    <div class="plane-card" data-plane="f16">
+      <img src="F.jpg">
+      <div class="plane-name">F-16</div>
+    </div>
+
+    <div class="plane-card" data-plane="spitfire">
+      <img src="R.jpg">
+      <div class="plane-name">Spitfire</div>
+    </div>
+
+    <div class="plane-card" data-plane="su57">
+      <img src="sugoi.jpg">
+      <div class="plane-name">Sukhoi Su-57</div>
+    </div>
+  </div>
+
+  <div class="info-panel">
+    <h3 id="planeTitle">Klik gambar pesawat</h3>
+    <p id="detailDescription">Detail akan muncul di sini</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 - Fajjar Nafarriq Prayuga
+</footer>
+
+<script>
+const data = {
+  boeing747: "Pesawat jumbo pertama di dunia.",
+  a380: "Pesawat terbesar di dunia.",
+  concorde: "Pesawat supersonik tercepat.",
+  cessna172: "Pesawat latih populer.",
+  f16: "Jet tempur modern.",
+  spitfire: "Pesawat perang legendaris.",
+  su57: "Jet tempur generasi 5."
+};
+
+document.querySelectorAll(".plane-card").forEach(card => {
+  card.addEventListener("click", () => {
+    const key = card.getAttribute("data-plane");
+    document.getElementById("planeTitle").innerText = key.toUpperCase();
+    document.getElementById("detailDescription").innerText = data[key];
+  });
+});
+</script>
+
+</body>
+</html>
